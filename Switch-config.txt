@@ -1,0 +1,21 @@
+!
+version 12.2
+service timestamps debug datetime msec
+service timestamps log datetime msec
+hostname Switch0
+!
+interface FastEthernet0/1
+ switchport mode access
+ switchport access vlan 10
+!
+interface FastEthernet0/2
+ switchport mode access
+ switchport access vlan 20
+!
+vlan 10
+ name Web_Servers
+!
+vlan 20
+ name Clients
+!
+end
